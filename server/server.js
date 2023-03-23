@@ -47,7 +47,7 @@ require("./routers/content.router")(app);
 require("./routers/items.router")(app);
 require("./routers/locale.router")(app);
 require("./routers/media.router")(app);
-require("./routers/tutorial.router")(app);
+
 
 // listen for requests
 app.listen(3000, () => {

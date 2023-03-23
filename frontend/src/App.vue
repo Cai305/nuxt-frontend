@@ -16,6 +16,9 @@
     </nav>
 
     <div class="container mt-3">
+      <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
       <router-view />
     </div>
   </div>
