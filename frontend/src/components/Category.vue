@@ -1,55 +1,43 @@
 <template>
     <div v-if="currentCategory" class="container edit-form">
-      <h4>Category</h4>
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="title"
-            v-model="currentCategory.title"
-          />
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <input type="text" class="form-control" id="description"
-            v-model="currentCategory.description"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label><strong>Status:</strong></label>
-          {{ currentCategory.published ? "Published" : "Pending" }}
-        </div>
-      </form>
-  
-      <button class="badge badge-primary mr-2"
-        v-if="currentCategory.published"
-        @click="updatePublished(false)"
-      >
-        UnPublish
-      </button>
-      <button v-else class="badge badge-primary mr-2"
-        @click="updatePublished(true)"
-      >
-        Publish
-      </button>
-  
-      <button class="badge badge-danger mr-2"
-        @click="deleteCategory"
-      >
-        Delete
-      </button>
-  
-      <button type="submit" class="badge badge-success"
-        @click="updateCategory"
-      >
-        Update
-      </button>
-      <p>{{ message }}</p>
+     <div class="container-fluid">
+          <h4>Category</h4>
+              <form>
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" id="title"
+                    v-model="currentCategory.title"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <input type="text" class="form-control" id="description"
+                    v-model="currentCategory.description"
+                  />
+                </div>
+          
+                <div class="form-group">
+                  <label><strong>Status:</strong></label>
+                  {{ currentCategory.published ? "Published" : "Pending" }}
+                </div>
+              </form>
+
+              <br />
+              <div v-if="message" class="alert alert-primary" role="alert">
+                <p>{{ message }}</p>
+              </div>
+     </div>
+    
     </div>
   
     <div v-else>
       <br />
-      <p>Please click on a Category...</p>
+      <br />
+      <div class="alert alert-primary" role="alert">
+        <p>Please click on a Category...</p>
+</div>
+
+ 
       
     </div>
 
@@ -142,5 +130,7 @@
   </script>
   
   <style>
-
+.mybtn {
+  justify-content: space-between;
+}
   </style>

@@ -7,18 +7,15 @@
           <router-link to="/category" class="nav-link">Categories</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/add" class="nav-link">Add</router-link>
+          <router-link to="/addCat" class="nav-link">Add category</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/addCat" class="nav-link">Add category</router-link>
+          <router-link to="/additem" class="nav-link">Add Item</router-link>
         </li>
       </div>
     </nav>
 
     <div class="container mt-3">
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
       <router-view />
     </div>
   </div>

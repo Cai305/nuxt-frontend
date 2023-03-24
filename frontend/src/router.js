@@ -2,7 +2,6 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import AddCategory from '@/components/AddCategory.vue';
 import CategoryList from '@/components/CategoryList.vue';
-import Category from '@/components/Category.vue';
 import EditCategory from '@/components/EditCategory.vue';
 import AddItem from '@/components/AddItem.vue';
 import ItemList from '@/components/ItemList.vue';
@@ -10,10 +9,8 @@ import Item from '@/components/Item.vue';
 
 
 const routes =  [
-
-  // category
   {
-    path: "/",
+    path: "",
     alias: "/category",
     name: "category",
     component: CategoryList
@@ -24,11 +21,6 @@ const routes =  [
     name: "category",
     component: CategoryList
   },
-  // {
-  //   path: "/category/:id",
-  //   name: "category-details",
-  //   component: Category
-  // },
   {
     path: "/category/:id",
     name: "edi-category-details",
@@ -53,8 +45,8 @@ const routes =  [
     component: Item
   },
   {
-    path: "/Additem",
-    name:"items",
+    path: "/additem",
+    name:"additem",
     component: AddItem
   }
 ];
